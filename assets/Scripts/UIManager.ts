@@ -96,10 +96,10 @@ export default class UIManager extends cc.Component {
 
         // 🌟 3. 將最終成績寫入面板上的 Label
         if (this.finalScoreLabel) {
-            this.finalScoreLabel.string = "本局得分: " + this.currentScore;
+            this.finalScoreLabel.string = "Score: " + this.currentScore;
         }
         if (this.finalTimeLabel && this.gameManager) {
-            this.finalTimeLabel.string = "本局用時: " + this.gameManager.timer.toFixed(1) + "s";
+            this.finalTimeLabel.string = "Time: " + this.gameManager.timer.toFixed(1) + "s";
         }
 
         // 4. 自動刷新排行榜
@@ -138,7 +138,7 @@ export default class UIManager extends cc.Component {
         this.currentSort = (this.currentSort === 'score') ? 'clearTime' : 'score';
         
         if (this.sortBtnLabel) {
-            this.sortBtnLabel.string = (this.currentSort === 'score') ? "排序：最高分數" : "排序：最短耗時";
+            this.sortBtnLabel.string = (this.currentSort === 'score') ? "Order: by score" : "Order: by time";
         }
         
         this.refreshLeaderboard();

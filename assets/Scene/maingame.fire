@@ -5876,6 +5876,15 @@
     "damageSound": {
       "__uuid__": "98739158-d8e1-4f8b-b750-bbb444e4ce3c"
     },
+    "victorySound": {
+      "__uuid__": "3fbf0745-48bc-4b24-af7f-dfcdd38096a1"
+    },
+    "spawnItemSound": {
+      "__uuid__": "7480842b-e5e9-433f-85f9-bb468d2dbbda"
+    },
+    "enemyAttackSound": {
+      "__uuid__": "83320f43-f20f-41ef-8715-cb4e8e9d2ffa"
+    },
     "_id": "46StBqKONKUoLch6eXXfop"
   }
 ]

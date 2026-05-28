@@ -1,5 +1,8 @@
 const {ccclass, property} = cc._decorator;
 
+// 🌟 引入 AudioManager
+import AudioManager from "./AudioManager";
+
 @ccclass
 export default class BlockController extends cc.Component {
     // 這裡挖一個洞，讓我們可以在編輯器裡把蘑菇 Prefab 塞進來
@@ -20,6 +23,11 @@ export default class BlockController extends cc.Component {
             if (normal.y < -0.5) {
                 this.isUsed = true;
                 console.log("玩家頂了方塊！生出蘑菇！");
+
+                // 🌟 播放「問號箱出蘑菇」的音效
+                if (AudioManager.instance) {
+                    AudioManager.instance.playSpawnItem();
+                }
 
                 // 1. 動態生成蘑菇
                 if (this.mushroomPrefab) {

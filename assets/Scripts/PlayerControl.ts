@@ -136,6 +136,11 @@ export default class PlayerController extends cc.Component {
             if (UIManager.instance) {
                 UIManager.instance.triggerGameOver(true); 
             }
+            // 🌟 播放勝利音效，並停止 BGM
+            if (AudioManager.instance) {
+                AudioManager.instance.stopBGM();
+                AudioManager.instance.playVictory();
+            }
             return; 
         }
 
@@ -170,6 +175,9 @@ export default class PlayerController extends cc.Component {
                 this.takeDamage(knockbackDir * 150); 
                 let enemyCtrl = otherCollider.node.getComponent("EnemyController");
                 if (enemyCtrl) enemyCtrl.playHit();
+
+                // 🌟 播放怪物攻擊音效
+                if (AudioManager.instance) AudioManager.instance.playEnemyAttack();
             }
         }
 
@@ -184,6 +192,7 @@ export default class PlayerController extends cc.Component {
             
             this.pendingGrowth = true; 
         }
+ 
     }
     
     private startFlashing() {
