@@ -1,0 +1,37 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "ascend",
+  "_objFlags": 0,
+  "_native": "",
+  "_duration": 1.0166666666666666,
+  "sample": 60,
+  "speed": 1,
+  "wrapMode": 2,
+  "curveData": {
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0.016666666666666666,
+            "value": {
+              "__uuid__": "b1762515-cff5-4e25-9dcb-2a03b074316c"
+            }
+          },
+          {
+            "frame": 0.5,
+            "value": {
+              "__uuid__": "55a90e2b-193d-45ef-bbe0-f3b4fbf23b0e"
+            }
+          },
+          {
+            "frame": 1,
+            "value": {
+              "__uuid__": "b1762515-cff5-4e25-9dcb-2a03b074316c"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "events": []
+}
